@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRecipeController">
+    <children>
+        <TextField fx:id="TF_Cim" editable="false" layoutX="247.0" layoutY="23.0" prefHeight="26.0" prefWidth="330.0" />
+        <TextArea fx:id="TA_Leiras" editable="false" layoutX="23.0" layoutY="207.0" prefHeight="200.0" prefWidth="554.0" wrapText="true" />
+
+        <Label fx:id="LBL_FilePath" layoutX="179.0" layoutY="463.0" />
+      <ImageView fx:id="Image_Kep" fitHeight="170.0" fitWidth="212.0" layoutX="23.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+      <TextArea fx:id="TA_Hozzavalok" editable="false" layoutX="247.0" layoutY="64.0" prefHeight="128.0" prefWidth="330.0" wrapText="true" />
+        <Button fx:id="BTN_UjKomment" layoutX="23.0" layoutY="437.0" mnemonicParsing="false" onAction="#ujKommetAction" text="Hozzászólok" />
+      <Button fx:id="BTN_Torles" layoutX="426.0" layoutY="437.0" mnemonicParsing="false" onAction="#torlesAction" text="Törlés" />
+      <Button fx:id="BTN_Vissza" layoutX="518.0" layoutY="437.0" mnemonicParsing="false" onAction="#visszaAction" text="Vissza" />
+      <TableView fx:id="TBLVIEW_Kommentek" layoutX="21.0" layoutY="479.0" prefHeight="200.0" prefWidth="554.0">
+        <columns>
+          <TableColumn fx:id="COL_Mikor" prefWidth="130.0" minWidth="130" text="Mikor" />
+            <TableColumn fx:id="COL_Hozzaszolas" minWidth="330.0" prefWidth="330.0" text="Hozzászólás" />
+        </columns>
+      </TableView>
+    </children>
+</AnchorPane>

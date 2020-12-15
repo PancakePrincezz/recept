@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HomeController">
+   <children>
+      <Label layoutX="27.0" layoutY="27.0" text="Üdv" />
+      <Label fx:id="LBL_UserName" layoutX="59.0" layoutY="27.0" text="USERNAME" />
+       <TableView fx:id="TBLVIEW_Receptek" layoutX="27.0" layoutY="99.0" prefHeight="288.0" prefWidth="543.0">
+        <columns>
+        </columns>
+      </TableView>
+      <Button fx:id="BTN_UjRecept" layoutX="491.0" layoutY="22.0" mnemonicParsing="false" onAction="#ujReceptAction" text="+ Recept" />
+      <TextField fx:id="TF_CimKereso" layoutX="88.0" layoutY="61.0" />
+      <Label layoutX="27.0" layoutY="66.0" text="Keresés" />
+   </children>
+</AnchorPane>

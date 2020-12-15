@@ -1,0 +1,34 @@
+CREATE TABLE recept_User(
+    UserId INT NOT NULL AUTO_INCREMENT,
+    UserName VARCHAR(255) NOT NULL,
+    PwHash VARCHAR(512) NOT NULL,
+    PRIMARY KEY(UserId)
+); CREATE TABLE recept_Foto(
+    FotoId INT NOT NULL AUTO_INCREMENT,
+    DATA TEXT NOT NULL,
+    PRIMARY KEY(FotoId)
+); CREATE TABLE recept_Recept(
+    ReceptId INT NOT NULL AUTO_INCREMENT,
+    Cim VARCHAR(255) NOT NULL,
+    Leiras VARCHAR(2048) NOT NULL,
+    SzerzoId INT NOT NULL,
+    FotoId INT NULL,
+    FOREIGN KEY(FotoId) REFERENCES recept_Foto(FotoId) ON DELETE CASCADE,
+    FOREIGN KEY(SzerzoId) REFERENCES recept_User(UserId) ON DELETE CASCADE,
+    PRIMARY KEY(ReceptId)
+); CREATE TABLE recept_Hozzavalo(
+    Id INT NOT NULL AUTO_INCREMENT,
+    Hozzavalo VARCHAR(255) NOT NULL,
+    ReceptId INT NOT NULL,
+    FOREIGN KEY(ReceptId) REFERENCES recep_Recept(ReceptId) ON DELETE CASCADE,
+    PRIMARY KEY(Id)
+); CREATE TABLE recept_Komment(
+    Id INT NOT NULL AUTO_INCREMENT,
+    HozzaszoloId INT NOT NULL,
+    ReceptId INT NOT NULL,
+    Komment VARCHAR(512) NOT NULL,
+    Datum DATE NOT NULL,
+    FOREIGN KEY(HozzaszoloId) REFERENCES recept_User(UserId) ON DELETE CASCADE,
+    FOREIGN KEY(ReceptId) REFERENCES recept_Recept(ReceptId) ON DELETE CASCADE,
+    PRIMARY KEY(Id)
+);
