@@ -25,10 +25,10 @@ public class Recept {
     @Column(nullable = false)
     private String Cim;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 20000)
     private String Leiras;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 20000)
     private String Hozzavalok;
 
     @ManyToOne(cascade = CascadeType.MERGE)

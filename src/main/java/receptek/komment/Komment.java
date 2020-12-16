@@ -39,7 +39,7 @@ public class Komment {
     @Column(nullable = false)
     private int ReceptId;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 20000)
     private String Komment;
 
     @Column(nullable = false)
