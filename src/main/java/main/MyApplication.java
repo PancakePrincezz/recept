@@ -13,7 +13,10 @@ public class MyApplication extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         primaryStage.setTitle("Receptek");
         primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root));
+        Scene r = new Scene(root);
+        primaryStage.setScene(r);
+        r.getStylesheets().add
+                (getClass().getResource("/css/home.css").toExternalForm());
         primaryStage.show();
     }
 

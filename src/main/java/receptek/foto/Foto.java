@@ -23,6 +23,6 @@ public class Foto {
     @GeneratedValue
     private int Id;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 1024000)
     private String Data;
 }

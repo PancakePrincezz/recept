@@ -112,8 +112,10 @@ public class NewRecipeController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
             Parent root = fxmlLoader.load();
             fxmlLoader.<HomeController>getController().initData(userName, userId);
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();Scene r = new Scene(root);
+            stage.setScene(r);
+            r.getStylesheets().add
+                    (getClass().getResource("/css/home.css").toExternalForm());
             stage.show();
             log.info("Loading home scene.");
         }
@@ -123,8 +125,10 @@ public class NewRecipeController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
         Parent root = fxmlLoader.load();
         fxmlLoader.<HomeController>getController().initData(userName, userId);
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();Scene r = new Scene(root);
+        stage.setScene(r);
+        r.getStylesheets().add
+                (getClass().getResource("/css/home.css").toExternalForm());
         stage.show();
         log.info("Loading home scene.");
     }

@@ -48,6 +48,9 @@ public class HomeController {
     @FXML
     private TextField TF_CimKereso;
 
+    @FXML
+    private Button BTN_Kilepes;
+
     public void initData(String userName, int userId){
         this.userName = userName;
         this.userId = userId;
@@ -119,7 +122,10 @@ public class HomeController {
                                 Parent root = loader.load();
                                 loader.<ViewRecipeController>getController().initData(userName, userId, recept.getReceptId());
                                 Stage stage = (Stage) (TBLVIEW_Receptek).getScene().getWindow();
-                                stage.setScene(new Scene(root));
+                                Scene r = new Scene(root);
+                                stage.setScene(r);
+                                r.getStylesheets().add
+                                        (getClass().getResource("/css/home.css").toExternalForm());
                                 stage.show();
                             } catch (java.io.IOException ex) {
                                 log.error("LoadData with '{}' receptId failed.", recept.getReceptId());
@@ -234,10 +240,29 @@ public class HomeController {
         Parent root = fxmlLoader.load();
         fxmlLoader.<NewRecipeController>getController().initData(userName, userId);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        Scene r = new Scene(root);
+        stage.setScene(r);
+        r.getStylesheets().add
+                (getClass().getResource("/css/home.css").toExternalForm());
         stage.show();
 
         log.info("HomeController - ujReceptAction finished with userName: '{}'", this.userName);
         log.info("userName is '{}', loading newRecipe scene.", userName);
+    }
+
+    public void kilepesAction(ActionEvent actionEvent) throws IOException {
+        log.info("HomeController - kilepesAction started with userName:'{}'", this.userName);
+
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
+        Parent root = fxmlLoader.load();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene r = new Scene(root);
+        stage.setScene(r);
+        r.getStylesheets().add
+                (getClass().getResource("/css/home.css").toExternalForm());
+        stage.show();
+
+        log.info("HomeController - kilepesAction finished with userName:'{}'", this.userName);
+        log.info("userName:'{}', loading login scene", this.userName);
     }
 }

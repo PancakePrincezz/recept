@@ -211,8 +211,10 @@ public class ViewRecipeController {
 
             Parent root = fxmlLoader.load();
             fxmlLoader.<HomeController>getController().initData(userName, userId);
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();Scene r = new Scene(root);
+            stage.setScene(r);
+            r.getStylesheets().add
+                    (getClass().getResource("/css/home.css").toExternalForm());
             stage.show();
             log.info("Loading home scene.");
         } catch (Exception ex){
@@ -229,7 +231,10 @@ public class ViewRecipeController {
         Parent root = fxmlLoader.load();
         fxmlLoader.<HomeController>getController().initData(userName, userId);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        Scene r = new Scene(root);
+        stage.setScene(r);
+        r.getStylesheets().add
+                (getClass().getResource("/css/home.css").toExternalForm());
         stage.show();
 
         log.info("ViewRecipe - visszaAction finished with userName: '{}'", this.userName);

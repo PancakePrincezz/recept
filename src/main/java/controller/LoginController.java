@@ -46,7 +46,10 @@ public class LoginController {
                 Parent root = fxmlLoader.load();
                 fxmlLoader.<HomeController>getController().initData(TF_Felhasznalonev.getText(), loginUserId);
                 Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                stage.setScene(new Scene(root));
+                Scene r = new Scene(root);
+                stage.setScene(r);
+                r.getStylesheets().add
+                        (getClass().getResource("/css/home.css").toExternalForm());
                 stage.show();
                 log.info("userName is '{}', loading home scene.", TF_Felhasznalonev.getText());
             } else{
@@ -61,7 +64,10 @@ public class LoginController {
         Parent root = fxmlLoader.load();
         fxmlLoader.<HomeController>getController().initData(TF_Felhasznalonev.getText(), -1);
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(root));
+        Scene r = new Scene(root);
+        stage.setScene(r);
+        r.getStylesheets().add
+                (getClass().getResource("/css/home.css").toExternalForm());
         stage.show();
         log.info("userName is '{}', loading home scene.", TF_Felhasznalonev.getText());
     }
@@ -82,7 +88,10 @@ public class LoginController {
                 Parent root = fxmlLoader.load();
                 fxmlLoader.<HomeController>getController().initData(TF_Felhasznalonev.getText(), regUserId);
                 Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-                stage.setScene(new Scene(root));
+                Scene r = new Scene(root);
+                stage.setScene(r);
+                r.getStylesheets().add
+                        (getClass().getResource("/css/home.css").toExternalForm());
                 stage.show();
                 log.info("userName is '{}', loading home scene.", TF_Felhasznalonev.getText());
             } else{

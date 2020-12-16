@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="528.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewRecipeController">
+<AnchorPane prefHeight="528.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewRecipeController">
    <children>
       <Label layoutX="43.0" layoutY="28.0" text="Új recept">
          <font>
             <Font size="31.0" />
          </font></Label>
-      <TextField fx:id="TF_Cim" layoutX="138.0" layoutY="83.0" prefHeight="26.0" prefWidth="330.0" />
+      <TextField fx:id="TF_Cim" layoutX="138.0" layoutY="83.0" opacity="0.8" prefHeight="26.0" prefWidth="330.0" />
       <Label layoutX="43.0" layoutY="88.0" text="Cím" />
       <Label layoutX="43.0" layoutY="134.0" text="Hozzávalók" />
       <Label layoutX="43.0" layoutY="236.0" text="Leírás" />
-      <TextArea fx:id="TA_Leiras" layoutX="138.0" layoutY="236.0" prefHeight="200.0" prefWidth="330.0" wrapText="true" />
-      <Button fx:id="BTN_FotoFeltoltes" layoutX="56.0" layoutY="458.0" mnemonicParsing="false" onAction="#chooseFotoAction" text="Fotó feltöltése" />
+      <TextArea fx:id="TA_Leiras" layoutX="138.0" layoutY="236.0" opacity="0.8" prefHeight="200.0" prefWidth="330.0" wrapText="true" />
+      <Button fx:id="BTN_FotoFeltoltes" layoutX="56.0" layoutY="458.0" mnemonicParsing="false" onAction="#chooseFotoAction" opacity="0.9" text="Fotó feltöltése" />
       <Label fx:id="LBL_FilePath" layoutX="179.0" layoutY="463.0" />
-      <Button fx:id="BTN_Mentes" layoutX="406.0" layoutY="484.0" mnemonicParsing="false" onAction="#mentesAction" text="Mentés" />
-      <Button fx:id="BTN_Megse" layoutX="498.0" layoutY="484.0" mnemonicParsing="false" onAction="#megseAction" text="Mégse" />
-      <TextArea fx:id="TA_Hozzavalok" layoutX="138.0" layoutY="124.0" prefHeight="95.0" prefWidth="330.0" wrapText="true" />
-      <Label fx:id="LBL_Error" layoutX="173.0" layoutY="442.0" prefHeight="32.0" prefWidth="388.0" textFill="#ee1414" />
+      <Button fx:id="BTN_Mentes" layoutX="406.0" layoutY="484.0" mnemonicParsing="false" onAction="#mentesAction" opacity="0.9" text="Mentés" />
+      <Button fx:id="BTN_Megse" layoutX="498.0" layoutY="484.0" mnemonicParsing="false" onAction="#megseAction" opacity="0.9" text="Mégse" />
+      <TextArea fx:id="TA_Hozzavalok" layoutX="138.0" layoutY="124.0" opacity="0.8" prefHeight="95.0" prefWidth="330.0" wrapText="true" />
+      <Label fx:id="LBL_Error" layoutX="200.0" layoutY="455.0" prefHeight="32.0" prefWidth="388.0" textFill="#ee1414" />
    </children>
 </AnchorPane>

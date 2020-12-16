@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <TextField fx:id="TF_Felhasznalonev" layoutX="220.0" layoutY="174.0" />
-      <PasswordField fx:id="PF_Jelszo" layoutX="220.0" layoutY="241.0" />
-      <Button fx:id="BTN_Belepes" layoutX="185.0" layoutY="308.0" mnemonicParsing="false" onAction="#loginAction" text="Belépés" />
-      <Button fx:id="BTN_Regisztracio" layoutX="341.0" layoutY="308.0" mnemonicParsing="false" onAction="#registerAction" text="Regisztráció" />
+      <TextField fx:id="TF_Felhasznalonev" layoutX="220.0" layoutY="174.0" opacity="0.8" />
+      <PasswordField fx:id="PF_Jelszo" layoutX="220.0" layoutY="241.0" opacity="0.8" />
+      <Button fx:id="BTN_Belepes" layoutX="185.0" layoutY="308.0" mnemonicParsing="false" onAction="#loginAction" opacity="0.9" text="Belépés" />
+      <Button fx:id="BTN_Regisztracio" layoutX="341.0" layoutY="308.0" mnemonicParsing="false" onAction="#registerAction" opacity="0.9" text="Regisztráció" />
       <Button fx:id="BTN_Vendeg" layoutX="224.0" layoutY="295.0" mnemonicParsing="false" onAction="#loginAsVendegAction" text="Belépés Vendégként" visible="false" />
-      <Text layoutX="282.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jelszó" />
-      <Text layoutX="184.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receptkonyvem" textAlignment="CENTER">
-         <font>
-            <Font size="30.0" />
-         </font></Text>
+      <Text layoutX="282.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jelszó" textAlignment="CENTER" />
+      <Text id="welcometext" layoutX="184.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receptkönyvem" textAlignment="CENTER">
+      </Text>
       <Text layoutX="250.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Felhasználónév" textAlignment="CENTER" />
-      <Label fx:id="LBL_ErrorLabel" layoutX="220.0" layoutY="267.0" prefHeight="35.0" prefWidth="353.0" textFill="#ee212e">
+      <Label fx:id="LBL_ErrorLabel" layoutX="220.0" layoutY="267.0" prefHeight="35.0" prefWidth="353.0" textAlignment="CENTER" textFill="#ee212e">
          <font>
             <Font name="System Italic" size="13.0" />
          </font></Label>
